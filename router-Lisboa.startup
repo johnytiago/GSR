@@ -1,0 +1,5 @@
+ip add dev eth0 10.0.0.134/30
+ip add dev eth1 10.0.0.138/30
+ip add dev eth2 192.168.1.1/29
+./etc/init.d/dhcp3-server start
+./etc/init.d/zebra starts
