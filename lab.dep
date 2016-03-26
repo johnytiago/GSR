@@ -1,0 +1,6 @@
+Maquina1-LanServicosAdminPorto Maquina2-LanServicosAdminPorto: switch-LanServicosAdminPorto router-Porto
+Maquina1-LanServicosAdminCoimbra Maquina2-LanServicosAdminCoimbra: switch-LanServicosAdminCoimbra router-Coimbra
+Maquina1-LanServicosAdminLisboa Maquina2-LanServicosAdminLisboa: switch-LanServicosAdminLisboa router-Lisboa
+Maquina1-LanServicosAdminSede Maquina2-LanServicosAdminSede Maquina3-LanServicosAdminSede: switch-LanServicosAdminSede router-Sede
+DNSPrimarioEmail-LanServidoresPublicos DNSSecundarioHTTP-LanServidoresPublicos: switch-LanServidoresPublicos router-Sede
+MonitorizacaoRede-LanServidoresPrivados ServidorFicheiros-LanServidoresPrivados: switch-LanServidoresPrivados router-Sede
