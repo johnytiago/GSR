@@ -1,8 +1,8 @@
-ip add dev eth0 10.0.0.129/30
+ip addr add dev eth0 10.0.0.129/30
 ip link set dev eth0 up
-ip add dev eth1 10.0.0.141/30
+ip addr add dev eth1 10.0.0.141/30
 ip link set dev eth1 up
-ip add dev eth2 192.168.1.1/29
+ip addr add dev eth2 192.168.1.1/29
 ip link set dev eth2 up
 
 ./etc/init.d/dhcp3-server start
