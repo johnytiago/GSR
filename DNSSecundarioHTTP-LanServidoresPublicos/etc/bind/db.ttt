@@ -16,5 +16,5 @@ ns2	IN	A	10.0.0.147
 
 autocar					IN		A		10.0.0.147
 pop.autocar			IN 		A		10.0.0.146
-imap.autocacr		IN 		A		10.0.0.146
+imap.autocar		IN 		A		10.0.0.146
 mail.autocar		IN 		A		10.0.0.146
