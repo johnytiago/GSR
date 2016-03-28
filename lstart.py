@@ -47,4 +47,4 @@ for i in l:
 		f.close()
 	if not os.path.exists(i):
 		os.makedirs(i)
-		print print "CREATED: " + i + "/"
+		print "CREATED: " + i + "/"
