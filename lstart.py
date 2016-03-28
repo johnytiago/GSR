@@ -40,14 +40,11 @@ for i in l:
 	startup = i + ".startup"
 	try:
 		f = open (startup, "r")
-		print startup + " already exists"
 	except:
 		f = open (startup, "a")
-		print startup + " created"
+		print "CREATED: " + startup
 	finally:
 		f.close()
-	if os.path.exists(i):
-		print i + "/ already exists"
-	else:
+	if not os.path.exists(i):
 		os.makedirs(i)
-		print i + "/ created"
+		print print "CREATED: " + i + "/"
