@@ -7,8 +7,9 @@ $TTL	60000
 			      0 )	; Negative Cache TTL
 ;
 @	IN	NS	ns.ttt.
-@	IN	NS	ns1.autocar.ttt.
-@	IN	NS	ns2.autocar.ttt.
+autocar	IN	NS	ns1.autocar.ttt.
+autocar	IN	NS	ns2.autocar.ttt.
+
 
 ns					IN	A	10.0.0.166
 ns1.autocar	IN	A	10.0.0.146
