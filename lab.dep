@@ -4,3 +4,7 @@ Maquina1-LanServicosAdminLisboa Maquina2-LanServicosAdminLisboa: switch-LanServi
 Maquina1-LanServicosAdminSede Maquina2-LanServicosAdminSede Maquina3-LanServicosAdminSede: switch-LanServicosAdminSede router-Sede
 DNSPrimarioEmail-LanServidoresPublicos DNSSecundarioHTTP-LanServidoresPublicos: switch-LanServidoresPublicos router-Sede
 MonitorizacaoRede-LanServidoresPrivados ServidorFicheiros-LanServidoresPrivados: switch-LanServidoresPrivados router-Sede
+PC1-WifiPorto PC2-WifiPorto: router-Porto
+PC1-WifiLisboa PC2-WifiLisboa: router-Lisboa
+PC1-WifiSede PC2-WifiSede: router-Sede
+PC1-WifiCoimbra PC2-WifiCoimbra: router-Coimbra
