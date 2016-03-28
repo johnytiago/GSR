@@ -7,7 +7,7 @@ l = f.readlines()
 f.close()
 
 def removeFinalEnter (txt):
-	if txt[-1] == "\n":
+	if len(txt) != 0 and txt[-1] == "\n":
 		return removeFinalEnter (txt[:-1])
 	return txt
 def removeEnter (lst):
@@ -31,7 +31,7 @@ def removeEquals (lst):
 		for j in newLst:
 			if i == j:
 				exists = True
-		if not exists:
+		if not exists and i != "":
 			newLst = newLst + [i]
 	return newLst
 l = removeEquals (l)
@@ -50,4 +50,4 @@ for i in l:
 		print i + "/ already exists"
 	else:
 		os.makedirs(i)
-		print i + "/ creayed"
+		print i + "/ created"
