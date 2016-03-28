@@ -2,3 +2,7 @@ ip addr add dev eth0 10.0.0.146/29
 ip link set dev eth0 up
 ip route add default via 10.0.0.145
 /etc/init.d/bind start
+
+
+/etc/init.d/exim4 start
+/etc/init.d/inetd start
