@@ -9,3 +9,5 @@ ip link set dev eth3 up
 ./etc/init.d/dhcp3-server start
 ./etc/init.d/zebra start
 /etc/init.d/snmpd start
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE
