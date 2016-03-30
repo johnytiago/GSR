@@ -1,19 +1,15 @@
-ip addr add dev eth0 10.0.0.161/30
+ip addr add dev eth0 10.0.0.145/29
 ip link set dev eth0 up
-ip addr add dev eth1 10.0.0.145/29
+ip addr add dev eth1 10.0.0.153/29
 ip link set dev eth1 up
-ip addr add dev eth2 10.0.0.153/29
+ip addr add dev eth2 192.168.0.1/29
 ip link set dev eth2 up
-ip addr add dev eth3 192.168.1.1/29
+ip addr add dev eth3 10.0.0.161/28
 ip link set dev eth3 up
-ip addr add dev eth4 192.168.0.1/24
+ip addr add dev eth4 192.168.1.1/24
 ip link set dev eth4 up
-ip addr add dev eth5 10.0.0.133/30
+ip addr add dev eth5 10.0.0.1/30
 ip link set dev eth5 up
-ip addr add dev eth6 10.0.0.130/30
-ip link set dev eth6 up
 ./etc/init.d/dhcp3-server start
 ./etc/init.d/zebra start
 /etc/init.d/snmpd start
-iptables -t nat -A POSTROUTING -o eth5 -j MASQUERADE
-iptables -t nat -A POSTROUTING -o eth6 -j MASQUERADE
