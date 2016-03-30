@@ -2,6 +2,4 @@ ip addr add dev eth0 10.0.0.2/30
 ip link set dev eth0 up
 ip addr add dev eth1 10.0.0.5/30
 ip link set dev eth1 up
-./etc/init.d/dhcp3-server start
-./etc/init.d/zebra start
-/etc/init.d/snmpd start
+ip route add 10.0.0.128/25 via 10.0.0.2
