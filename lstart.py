@@ -7,8 +7,12 @@ l = f.readlines()
 f.close()
 
 def removeFinalEnter (txt):
-	if len(txt) != 0 and txt[-1] == "\n":
+	if len(txt) != 0 and txt[-1] in ["\n", " "]:
 		return removeFinalEnter (txt[:-1])
+	elif len(txt) != 0 and txt[0] in ["\n", " "]:
+		return removeFinalEnter (txt[1:])
+	elif len(txt) != 0 and (txt[0] == "#" or txt.startswith("LAB_")):
+		return ""
 	return txt
 def removeEnter (lst):
 	for i in range (len (lst)):
