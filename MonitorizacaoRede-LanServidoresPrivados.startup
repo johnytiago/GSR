@@ -2,7 +2,8 @@ ip addr add dev eth0 10.0.0.154/29
 ip link set dev eth0 up
 ip route add default via 10.0.0.153
 /etc/init.d/apache2 start
-#cfgmaker --global "WorkDir:/var/www" private@10.0.0.153 private@10.0.0.134 private@10.0.0.129 private@10.0.0.142 --output mrtg.cfg
+/etc/init.d/snmpd start
+cfgmaker --global "WorkDir:/var/www" private@10.0.0.153 private@10.0.0.134 private@10.0.0.129 private@10.0.0.142 private@10.0.0.154 private@10.0.0.155 private@10.0.0.146 private@10.0.0.147 --output mrtg.cfg
 mkdir /var/www/mrtg
 env LANG=C mrtg /mrtg.cfg --daemon
 indexmaker --title "Routers" --output /var/www/index.html /mrtg.cfg
