@@ -3,3 +3,10 @@ ip link set dev eth0 up
 ip route add default via 10.0.0.153
 
 /etc/init.d/snmpd start
+
+mkdir /home/FTP-shared
+useradd autocar
+echo -e "autocar\nautocar" | passwd autocar
+usermod -m -d /home/FTP-shared autocar
+chmod 777 /home/FTP-shared
+/etc/init.d/proftpd start
