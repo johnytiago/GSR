@@ -7,14 +7,15 @@ $TTL	60000
 			      0 )	; Negative Cache TTL
 ;
 @	IN	NS	ns1.autocar.ttt.
-@	IN	NS	ns2.autocar.ttt.
-@	IN	MX 5	mail.autocar.ttt.
+ns1						IN	A				10.0.0.146
 
+@	IN	NS	ns2.autocar.ttt.
+ns2						IN	A				10.0.0.147
+
+@	IN	MX 5	mail.autocar.ttt.
+mail					IN 	A 			10.0.0.146
 
 autocar.ttt.	IN	A				10.0.0.147
-ns1						IN	A				10.0.0.146
-ns2						IN	A				10.0.0.147
 imap					IN	A				10.0.0.146
 pop						IN	A				10.0.0.146
-mail					IN 	A 			10.0.0.146
 www						IN	CNAME 	ns2.autocar.ttt.

@@ -6,6 +6,8 @@ $TTL	60000
 			2419200		; Expire
 			      0 )	; Negative Cache TTL
 ;
-@	IN	NS	ns.leilei.ttt.
 
-ns								IN		A			10.0.0.166
+@	IN	NS	ns.leilei.ttt.
+ns 	IN		A			10.0.0.6
+
+leilei.ttt. IN A 10.0.0.6 
