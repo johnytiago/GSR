@@ -1,0 +1,4 @@
+personal-name=administracao
+user-domain=autocar.ttt
+smtp-server=mail.autocar.ttt
+inbox-path={imap.autocar.ttt/user=administracao}inbox

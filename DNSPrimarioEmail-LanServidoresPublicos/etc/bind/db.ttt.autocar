@@ -15,7 +15,7 @@ ns2						IN	A				10.0.0.147
 @	IN	MX 5	mail.autocar.ttt.
 mail					IN 	A 			10.0.0.146
 
-autocar.ttt.	IN	A				10.0.0.147
+autocar.ttt.	IN	A				10.0.0.146
 imap					IN	A				10.0.0.146
 pop						IN	A				10.0.0.146
 www						IN	CNAME 	ns2.autocar.ttt.
