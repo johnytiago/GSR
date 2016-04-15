@@ -1,3 +1,2 @@
-ip route add 10.0.0.0/24 via 192.168.1.1
-
-iptables -t nat -A POSTROUTING -o ??? -j MASQUERADE
+sudo ip route add 10.0.0.0/24 via 192.168.2.2
+sudo iptables -t nat -A POSTROUTING -o iwlwifi -j MASQUERADE
