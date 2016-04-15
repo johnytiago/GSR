@@ -19,4 +19,6 @@ autocar.ttt.	IN	A				10.0.0.146
 imap					IN	A				10.0.0.146
 pop						IN	A				10.0.0.146
 www						IN	CNAME 	ns2.autocar.ttt.
+intranet			IN	CNAME 	ns2.autocar.ttt.
 ftp						IN	A				10.0.0.155
+mrtg					IN	A				10.0.0.154
