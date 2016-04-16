@@ -9,3 +9,4 @@ PC1-WifiLisboa PC2-WifiLisboa: router-Lisboa
 PC1-WifiSede PC2-WifiSede: router-Sede
 PC1-WifiCoimbra PC2-WifiCoimbra: router-Coimbra
 MonitorizacaoRede-LanServidoresPrivados: router-Porto router-Coimbra router-Lisboa router-Sede DNSSecundarioHTTP-LanServidoresPublicos DNSPrimarioEmail-LanServidoresPublicos ServidorFicheiros-LanServidoresPrivados
+ServidorExterno: router-externo
