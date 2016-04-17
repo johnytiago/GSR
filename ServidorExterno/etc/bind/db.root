@@ -10,5 +10,16 @@ $TTL   60000
 @             IN  NS   ROOT-SERVER.
 ROOT-SERVER.	IN	A  	 10.0.0.6
 
-ttt.		IN 	NS	ns.ttt.
+ttt.		        IN 	NS	ns.ttt.
 ns.ttt.	IN 	A	  10.0.0.6
+
+
+
+leilei.ttt.		        IN 	NS	ns.leilei.ttt.
+ns.leilei.ttt.	IN 	A	  10.0.0.6
+
+
+autocar.ttt.		  IN 	NS	ns1.autocar.ttt.
+ns1.autocar.ttt.	IN	A				10.0.0.146
+autocar.ttt.		  IN 	NS	ns2.autocar.ttt.
+ns2.autocar.ttt.	IN	A				10.0.0.147
