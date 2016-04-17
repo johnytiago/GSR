@@ -1,0 +1,6 @@
+personal-name=porto-pecas
+user-domain=autocar.ttt
+smtp-server=mail.autocar.ttt
+inbox-path={imap.autocar.ttt/user=porto-pecas}inbox
+feature-list=reply-always-uses-reply-to
+customized-hdrs=Reply-To: porto-pecas@autocar.ttt

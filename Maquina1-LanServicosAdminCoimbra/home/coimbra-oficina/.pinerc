@@ -1,0 +1,6 @@
+personal-name=coimbra-oficina
+user-domain=autocar.ttt
+smtp-server=mail.autocar.ttt
+inbox-path={imap.autocar.ttt/user=coimbra-oficina}inbox
+feature-list=reply-always-uses-reply-to
+customized-hdrs=Reply-To: coimbra-oficina@autocar.ttt

@@ -1,1 +1,7 @@
 ./etc/init.d/networking restart
+
+users=("porto-pecas" "porto-oficina")
+for username in "${users[@]}"
+do
+  useradd -m $username && echo -e "$username\n$username" | passwd $username
+done
