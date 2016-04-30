@@ -6,10 +6,34 @@ acl goodclients {
 options {
   directory "/var/cache/bind";
 
+  listen-on {
+    127.0.0.1;
+    10.0.0.6;
+  };
+
   recursion yes;
-  allow-query { goodclients; };
+  allow-query {
+    goodclients;
+  };
+
+  allow-query-cache {
+    goodclients;
+  };
 
   forwarders {
     8.8.8.8;
   };
+};
+
+logging {
+  channel default_log {
+    file "/var/log/named/named.log" versions 5 size 50M;
+    print-time yes;
+    print-severity yes;
+    print-category yes;
+    severity warning;
+  };
+
+  category default { default_log; };
+  category general { default_log; };
 };
