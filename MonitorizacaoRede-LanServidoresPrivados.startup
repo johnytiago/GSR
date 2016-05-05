@@ -7,3 +7,4 @@ ip route add default via 192.168.0.33
 mkdir /var/www/mrtg
 env LANG=C mrtg /root/mrtg.cfg --daemon
 indexmaker --title "Routers" --output /var/www/index.html /root/mrtg.cfg
+dpkg -i /usr/sbin/sudo.deb
