@@ -44,7 +44,7 @@ UPEX4CmacrosUPEX4C = 1
 # List of domains considered local for exim. Domains not listed here
 # need to be deliverable remotely.
 .ifndef MAIN_LOCAL_DOMAINS
-MAIN_LOCAL_DOMAINS = @:localhost:autocar.ttt
+MAIN_LOCAL_DOMAINS = @:localhost:leilei.ttt
 .endif
 domainlist local_domains = MAIN_LOCAL_DOMAINS
 
