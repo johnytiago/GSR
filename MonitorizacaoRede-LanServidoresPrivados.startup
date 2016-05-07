@@ -8,3 +8,6 @@ mkdir /var/www/mrtg
 env LANG=C mrtg /root/mrtg.cfg --daemon
 indexmaker --title "Routers" --output /var/www/index.html /root/mrtg.cfg
 dpkg -i /usr/sbin/sudo.deb
+
+
+/etc/init.d/ssh start

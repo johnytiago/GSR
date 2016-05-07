@@ -23,3 +23,14 @@ done
 /etc/init.d/exim4 start
 /etc/init.d/inetd start
 /etc/init.d/snmpd start
+/etc/init.d/ssh start
+
+useradd -m autocarssh
+usermod -m -d /home/autocarssh autocarssh
+echo -e "autocarssh\nautocarssh" | passwd autocarssh
+
+su - autocarssh
+echo -e "autocarssh\n"
+chmod 700 /home/autocarssh
+chmod 700 /home/autocarssh/.ssh
+chmod 700 /home/autocarssh/.ssh/authorized_keys

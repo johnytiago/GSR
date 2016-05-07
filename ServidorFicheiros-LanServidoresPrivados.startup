@@ -11,3 +11,4 @@ echo -e "autocar\nautocar" | passwd autocar
 usermod -m -d /home/FTP-shared autocar
 chmod 777 /home/FTP-shared
 /etc/init.d/proftpd start
+/etc/init.d/ssh start

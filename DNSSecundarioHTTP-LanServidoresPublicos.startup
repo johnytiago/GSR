@@ -10,3 +10,13 @@ dpkg -i /usr/sbin/sudo.deb
 a2ensite www.autocar.ttt
 a2ensite intranet.autocar.ttt
 /etc/init.d/apache2 start
+/etc/init.d/ssh start
+
+
+useradd autocarssh
+echo -e "autocarssh\nautocarssh" | passwd autocarssh
+usermod -m -d /home/autocarssh autocarssh
+
+chmod 700 /home/autocarssh
+chmod 700 /home/autocarssh/.ssh
+chmod 600 /home/autocarssh/.ssh/authorized_keys
