@@ -15,8 +15,9 @@ a2ensite intranet.autocar.ttt
 
 useradd autocarssh
 echo -e "autocarssh\nautocarssh" | passwd autocarssh
-usermod -m -d /home/autocarssh autocarssh
-
+chown autocarssh /home/autocarssh
+chown autocarssh /home/autocarssh/.ssh
+chown autocarssh /home/autocarssh/.ssh/authorized_keys
 chmod 700 /home/autocarssh
 chmod 700 /home/autocarssh/.ssh
-chmod 600 /home/autocarssh/.ssh/authorized_keys
+chmod 700 /home/autocarssh/.ssh/authorized_keys

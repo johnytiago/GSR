@@ -12,3 +12,12 @@ usermod -m -d /home/FTP-shared autocar
 chmod 777 /home/FTP-shared
 /etc/init.d/proftpd start
 /etc/init.d/ssh start
+
+useradd autocarssh
+echo -e "autocarssh\nautocarssh" | passwd autocarssh
+chown autocarssh /home/autocarssh
+chown autocarssh /home/autocarssh/.ssh
+chown autocarssh /home/autocarssh/.ssh/authorized_keys
+chmod 700 /home/autocarssh
+chmod 700 /home/autocarssh/.ssh
+chmod 700 /home/autocarssh/.ssh/authorized_keys

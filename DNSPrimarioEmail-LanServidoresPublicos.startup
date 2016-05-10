@@ -25,12 +25,11 @@ done
 /etc/init.d/snmpd start
 /etc/init.d/ssh start
 
-useradd -m autocarssh
-usermod -m -d /home/autocarssh autocarssh
+useradd autocarssh
 echo -e "autocarssh\nautocarssh" | passwd autocarssh
-
-su - autocarssh
-echo -e "autocarssh\n"
+chown autocarssh /home/autocarssh
+chown autocarssh /home/autocarssh/.ssh
+chown autocarssh /home/autocarssh/.ssh/authorized_keys
 chmod 700 /home/autocarssh
 chmod 700 /home/autocarssh/.ssh
 chmod 700 /home/autocarssh/.ssh/authorized_keys
