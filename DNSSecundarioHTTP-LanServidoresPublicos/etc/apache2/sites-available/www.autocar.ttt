@@ -14,4 +14,8 @@
     SSLEngine On
     SSLCertificateFile    /etc/apache2/ssl/apache.crt
 		SSLCertificateKeyFile /etc/apache2/ssl/apache.key
+    <Directory />
+        Order allow,deny
+        Allow from 192.168.0.0/29
+    </Directory>
 </VirtualHost>
