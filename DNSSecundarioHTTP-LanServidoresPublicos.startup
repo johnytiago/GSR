@@ -12,7 +12,6 @@ a2enmod ssl
 
 a2ensite www.autocar.ttt
 a2ensite intranet.autocar.ttt
-a2ensite default-ssl.conf
 /etc/init.d/apache2 start
 /etc/init.d/ssh start
 
