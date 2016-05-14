@@ -9,6 +9,10 @@ $TTL	60000
 
 @	IN	NS	ns.leilei.ttt.
 ns 	IN		A			10.0.0.6
+@  IN  MX 5  mail.leilei.ttt.
+mail          IN  A       10.0.0.6
 
 leilei.ttt.		IN	A				10.0.0.6
 www						IN	CNAME 	ns.leilei.ttt.
+imap         IN  A       10.0.0.6
+pop           IN  A       10.0.0.6
