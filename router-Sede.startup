@@ -40,7 +40,7 @@ iptables -A FORWARD -d 10.0.0.146 -j ACCEPT -p udp --dport 161 #SNMP
 iptables -A FORWARD -d 10.0.0.146 -j ACCEPT -p udp --dport 162 #SNMP
 iptables -A FORWARD -d 10.0.0.146 -j ACCEPT -p tcp --dport 162 #SNMP
 iptables -A FORWARD -s 10.0.0.10 -d 10.0.0.146 -j ACCEPT -p tcp --dport 22 #SSH
-iptables -A FORWARD -d 10.0.0.146 -j DROP
+#iptables -A FORWARD -d 10.0.0.146 -j DROP
 
 # servidor secundario
 iptables -A FORWARD -d 10.0.0.147 -j ACCEPT -p udp --dport 53 #DNS
@@ -51,15 +51,21 @@ iptables -A FORWARD -d 10.0.0.147 -j ACCEPT -p udp --dport 161 #SNMP
 iptables -A FORWARD -d 10.0.0.147 -j ACCEPT -p udp --dport 162 #SNMP
 iptables -A FORWARD -d 10.0.0.147 -j ACCEPT -p tcp --dport 162 #SNMP
 iptables -A FORWARD -s 10.0.0.10 -d 10.0.0.147 -j ACCEPT -p tcp --dport 22 #SSH
-iptables -A FORWARD -d 10.0.0.147 -j DROP
+#iptables -A FORWARD -d 10.0.0.147 -j DROP
 
 
 # servidor monitorizacao
-#iptables -A FORWARD -s 10.0.0.128/25 -d 192.168.0.34 -j ACCEPT -p tcp --dport 80 #http
+iptables -A FORWARD -s 10.0.0.128/25 -d 192.168.0.34 -j ACCEPT -p tcp --dport 80 #http
 iptables -A FORWARD -s 10.0.0.128/25 -d 192.168.0.34 -j ACCEPT -p tcp --dport 22 #SSH
-iptables -A FORWARD -d 192.168.0.34 -j DROP
+#iptables -A FORWARD -d 192.168.0.34 -j DROP
 
-
+# servidor ficheiros
+#iptables -A FORWARD -s 10.0.0.128/25 -d 192.168.0.35 -j ACCEPT -p tcp --dport 20 #FTP
+#iptables -A FORWARD -s 192.168.0.0/16 -d 192.168.0.35 -j ACCEPT -p tcp --dport 20 #FTP
+#iptables -A FORWARD -s 10.0.0.128/25 -d 192.168.0.35 -j ACCEPT -p tcp --dport 21 #FTP
+#iptables -A FORWARD -s 192.168.0.0/16 -d 192.168.0.35 -j ACCEPT -p tcp --dport 21 #FTP
+#iptables -A FORWARD -s 10.0.0.128/25 -d 192.168.0.35 -j ACCEPT -p tcp --dport 22 #SSH
+#iptables -A FORWARD -d 192.168.0.35 -j DROP
 
 ##########
 
