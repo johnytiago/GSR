@@ -1,1 +1,1 @@
-ssh -L 8080:mrtg.autocar.ttt:22 autocarssh@ns1.autocar.ttt
+ssh -R 8080:mrtg.autocar.ttt:22 autocarssh@localhost
