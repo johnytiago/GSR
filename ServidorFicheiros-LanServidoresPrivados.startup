@@ -14,6 +14,7 @@ chmod 777 /home/FTP-shared
 /etc/init.d/ssh start
 
 useradd autocarssh
+echo "autocarssh	ALL=(ALL) ALL" >> /etc/sudoers
 echo -e "autocarssh\nautocarssh" | passwd autocarssh
 chown autocarssh /home/autocarssh
 chown autocarssh /home/autocarssh/.ssh
