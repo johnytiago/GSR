@@ -14,6 +14,7 @@ ip addr add dev eth6 10.0.0.130/30
 ip link set dev eth6 up
 
 ip route add 10.0.0.0/28 via 10.0.0.2
+ip route add 192.168.3.0/24 via 10.0.0.147
 ip route add 0.0.0.0/0 via 192.168.2.1
 
 #NAT for private ip's
@@ -58,6 +59,7 @@ iptables -A FORWARD -s 10.0.0.10 -d 10.0.0.147 -j ACCEPT -p tcp --dport 8081 #SS
 iptables -A FORWARD -s 192.168.0.34 -d 10.0.0.147 -j ACCEPT -p tcp --sport 22 #SSH tunnel
 iptables -A FORWARD -s 192.168.0.35 -d 10.0.0.147 -j ACCEPT -p tcp --sport 22 #SSH tunnel
 iptables -A FORWARD -s 10.0.0.10 -d 10.0.0.147 -j ACCEPT -p tcp --dport 22 #SSH
+iptables -A FORWARD -d 10.0.0.147 -j ACCEPT -p udp --dport 1194 #VPN
 iptables -A FORWARD -d 10.0.0.147 -j DROP
 
 
