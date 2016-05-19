@@ -25,3 +25,5 @@ chown autocarssh /home/autocarssh/.ssh/authorized_keys
 chmod 700 /home/autocarssh
 chmod 700 /home/autocarssh/.ssh
 chmod 700 /home/autocarssh/.ssh/authorized_keys
+
+(openvpn /etc/openvpn/server.conf &) >> logvpn.txt

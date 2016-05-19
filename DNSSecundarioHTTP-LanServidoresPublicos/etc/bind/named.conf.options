@@ -12,9 +12,10 @@ options {
   };
 
   recursion yes;
-  allow-query {
-    goodclients;
+  allow-recursion {
+    goodClients;
   };
+
 
   allow-query-cache {
     goodclients;
