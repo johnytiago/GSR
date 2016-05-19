@@ -23,11 +23,15 @@ ip route add 0.0.0.0/0 via 192.168.2.1
 iptables -A FORWARD -i eth0 -d 192.168.0.0/16 -j DROP
 iptables -A FORWARD -i eth7 -d 192.168.0.0/16 -j DROP
 
+iptables -A FORWARD -i eth0 -s 10.0.0.128/25 -j DROP
+iptables -A FORWARD -i eth7 -s 10.0.0.128/25 -j DROP
+
 
 # block internet access to VPN clients
 # eth7 - interface internet;  eth0 - interface exterior
 iptables -A FORWARD -s 192.168.3.0/24 -o eth0 -j DROP
 iptables -A FORWARD -s 192.168.3.0/24 -o eth7 -j DROP
+
 
 
 # servidor primario
